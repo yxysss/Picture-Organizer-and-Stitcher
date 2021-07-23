@@ -1,0 +1,94 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.text.Text?>
+<GridPane style="-fx-background-color: darkgrey" fx:controller="sample.Controller"
+          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10" >
+
+    <Text GridPane.columnIndex="2" GridPane.rowIndex="0">Path:</Text>
+    <TextField fx:id="textField" promptText="Input Path" GridPane.columnIndex="3" GridPane.rowIndex="0" GridPane.columnSpan="2">
+
+    </TextField>
+
+    <Button text="load" GridPane.columnIndex="0" GridPane.rowIndex="1" onAction="#handleLoad">
+        <padding>
+            <Insets bottom="10.0" left="60.0" right="60.0" top="10.0" />
+        </padding>
+    </Button>
+
+    <Button text="delete" GridPane.columnIndex="1" GridPane.rowIndex="1" onAction="#handleDelete">
+        <padding>
+            <Insets bottom="10.0" left="60.0" right="60.0" top="10.0" />
+        </padding>
+    </Button>
+
+    <Button text="prev image" GridPane.columnIndex="2" GridPane.rowIndex="1" onAction="#handlePrevImage">
+        <padding>
+            <Insets bottom="10.0" left="60.0" right="60.0" top="10.0" />
+        </padding>
+    </Button>
+
+    <Button text="next image" GridPane.columnIndex="3" GridPane.rowIndex="1" onAction="#handleNextImage">
+        <padding>
+            <Insets bottom="10.0" left="60.0" right="60.0" top="10.0" />
+        </padding>
+    </Button>
+
+    <Button text="select" GridPane.columnIndex="4" GridPane.rowIndex="1" onAction="#handleSelect">
+        <padding>
+            <Insets bottom="10.0" left="60.0" right="60.0" top="10.0" />
+        </padding>
+    </Button>
+
+    <Button text="stitch" GridPane.columnIndex="5" GridPane.rowIndex="1" onAction="#handleStitch">
+        <padding>
+            <Insets bottom="10.0" left="60.0" right="60.0" top="10.0" />
+        </padding>
+    </Button>
+
+    <ListView fx:id="listView" GridPane.columnIndex="0" GridPane.rowIndex="2" GridPane.columnSpan="2">
+    </ListView>
+
+    <ImageView fx:id="imageView" GridPane.columnIndex="2" GridPane.rowIndex="2" GridPane.columnSpan="5" fitHeight="600.0" fitWidth="800.0" pickOnBounds="true" preserveRatio="true">
+    </ImageView>
+
+    <ImageView fx:id="selectImage1" GridPane.columnIndex="0" GridPane.rowIndex="3" fitHeight="60.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+    </ImageView>
+
+    <ImageView fx:id="selectImage2" GridPane.columnIndex="1" GridPane.rowIndex="3" fitHeight="60.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+    </ImageView>
+
+
+    <Button text="Rotate left"  GridPane.columnIndex="2" GridPane.rowIndex="3" onAction="#handleRotateLeft">
+    <padding>
+        <Insets bottom="10.0" left="65.0" right="65.0" top="10.0" />
+    </padding>
+    </Button>
+
+    <Button text="Scale down"  GridPane.columnIndex="3" GridPane.rowIndex="3" onAction="#handleScaleDown">
+        <padding>
+            <Insets bottom="10.0" left="65.0" right="65.0" top="10.0" />
+        </padding>
+    </Button>
+
+
+    <Button text="Scale up"  GridPane.columnIndex="4" GridPane.rowIndex="3" onAction="#handleScaleUp">
+        <padding>
+            <Insets bottom="10.0" left="65.0" right="65.0" top="10.0" />
+        </padding>
+    </Button>
+
+    <Button text="Rotate right"  GridPane.columnIndex="5" GridPane.rowIndex="3" onAction="#handleRotateRight">
+        <padding>
+            <Insets bottom="10.0" left="65.0" right="65.0" top="10.0" />
+        </padding>
+    </Button>
+
+</GridPane>
